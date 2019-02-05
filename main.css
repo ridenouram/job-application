@@ -14,3 +14,17 @@ fieldset{
     padding: 20px;
     margin-top: 20px;
 }
+
+#thanks-text{
+    font-size: 20px;
+}
+
+.thanks-links{
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+}
+
+#application-link{
+    font-size: 20px;
+}
