@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>Wakanda Mafia Family Application</title>
+</head>
+<body>
+    <header>
+        <a href="./index.html">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg8Ht--BFjUnFyMbiVOiDPPF3b-dYbsdzYQxp42EljnS8HJYuD9Q" width="75%" height="20%"></a>
+    </header>
+
+    <main>
+        <form id="form">
+            
+            <fieldset id="name">
+                <legend>
+                    Who Will Be In Our Presence?
+                </legend>
+                <label>
+                    First Name: 
+                    <input type="text" id="name" placeholder="First name">
+                    Last Name:
+                    <input type="text" id="name" placeholder="Last name">
+                </label>
+            </fieldset> 
+            
+            <fieldset>
+                <legend>Contact information</legend>
+                Phone Number:
+                <input type="text" id="phonenumber" placeholder="Phone number">
+                E-mail address:
+                <input type="text" id="email" placeholder="email address">
+            </fieldset>
+
+            <fieldset id="address">
+                <legend>Where Is Your Present Location</legend>
+                <label>Address: 
+                    <input type="text" id="street" placeholder="Street address">
+                </label>
+                
+                <label>City: 
+                    <input type="text" id="city" placeholder="City">
+                </label>
+                
+                Country: <select id="Country">
+                    <option hidden disabled selected>Country</option>
+                    <option value="Kenya">Kenya</option>
+                    <option value="Ethiopia">Ethiopia</option>
+                    <option value="Somalia">Somalia</option>
+                    <option value="Tanzania">Tanzania</option>
+                    <option value="other">Other</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>What You Should Expect</legend>
+                <p>
+                    Before you continue this Application, this is a hard life and we are looking for someone tough skin and you'll be asked to do a lot of hits and despicable things. You'll be accepted based on how many kills you have!! The most importent thinks is that your life belongs to the W.M.F, your loyalty and interest of serving the family is veary importent! 
+                </p>
+            </fieldset>
+
+            <fieldset id="amount-kills-carrying">
+                <legend>The Amount Of Kills You Carry?</legend>
+                <label>
+                    <input type="radio" name="key" value="new" >20
+                </label>
+                <label>
+                    <input type="radio" name="key" value="mid-level" >200
+                </label>
+                <label>
+                    <input type="radio" name="key" value="experienced" >600 I am a crazy B***(I mean business!)
+                </label>
+            </fieldset>
+        
+            <fieldset id="What Are Your Skills?">
+                <legend>
+                    Why You Special?
+                </legend>
+
+                <label>
+                    <input oninvalid="setCustomValidity('I Said List Your Skills, B***!!!!')" type="checkbox" name="Skills" value="MMA/Hand-Hand" required>MMA/Hand-Hand
+                </label>
+                <label>
+                    <input type="checkbox" name="Skills" value="Firearms">Firearms
+                </label>
+                <label>
+                    <input type="checkbox" name="Skills" value="Swordsmanship">Swordsmanship
+                </label>
+                <label>
+                    <input type="checkbox" name="Skills" value="Stealth">Stealth
+                </label>
+                <label>
+                    <input type="checkbox" name="Skills" value="Tai Chi Chuan">Tai Chi Chuan
+                </label>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Your Level Of Obedience</legend>
+
+                <input type="range" id="Level Of Obedience" name="Obedience" min="0" max="10"><span id="average-obedience">10</span>
+            </fieldset>
+
+            <button id="submit">Submit</button>
+
+        </form>
+    </main>
+    <!-- submission button link to another html page-->
+    <script type="module" src="./src/main.js"></script>
+</body>
+</html>
