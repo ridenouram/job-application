@@ -1,5 +1,4 @@
 const form = document.getElementById('form');
-
 const slider = document.getElementById('badness');
 const badScale = document.getElementById('badScale');
 
@@ -15,23 +14,23 @@ form.addEventListener('submit', function(event){
     const state = form.elements.state.value;
     const prank = form.elements.prank.value;
 
-    const weapon = form.elements.weapon;
-    const weaponPref = [];
-    for(let i = 0; i < weapon.length; i++) {
-        const weaponSelect = weapon[i];
+    const weaponAll = form.elements.weapon; //remember this!!!!
+    let weaponPref = [];
+
+    for(let i = 0; i < weaponAll.length; i++) {
+        const weaponSelect = weaponAll[i];
         if(weaponSelect.checked) {
             weaponPref[i] = weaponSelect.value;
         }
         
-    }  
-    const applicant = {
-        name: name,
-        city: city,
-        state: state,
-        pranks: prank,
-        weapon: weaponPref
-    };
-
-    console.log(applicant);
-})
-
+        const applicant = {
+            name: name,
+            city: city,
+            state: state,
+            prank: prank,
+            weapon: weaponPref,
+            slider: badScale.textContent
+        };
+        console.log(applicant);
+    }
+});
