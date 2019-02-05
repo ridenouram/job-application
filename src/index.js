@@ -20,9 +20,9 @@ form.addEventListener('submit', function(event){
 
     for(let i = 0; i < weaponAll.length; i++) {
         const weaponPref = weaponAll[i];
-        // weaponPref.push(weaponAll.value)
         if(weaponPref.checked) {
             weaponSelect[i] = weaponPref.value;
+            // weaponPref.push(weaponAll.value)
         }
     }
 
@@ -34,5 +34,10 @@ form.addEventListener('submit', function(event){
         weapon: weaponSelect,
         slider: slider.value
     };
-    console.log(applicant);
+    // console.log(applicant);
+
+    const serialize = JSON.stringify(applicant);
+    window.localStorage.setItem('applicant', serialize);
+    window.location = 'hello.html';
+
 });
