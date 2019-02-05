@@ -20,17 +20,19 @@ form.addEventListener('submit', function(event){
 
     for(let i = 0; i < weaponAll.length; i++) {
         const weaponPref = weaponAll[i];
+        // weaponPref.push(weaponAll.value)
         if(weaponPref.checked) {
             weaponSelect[i] = weaponPref.value;
         }
-        const applicant = {
-            name: name,
-            city: city,
-            state: state,
-            prank: prank,
-            weapon: weaponPref.value,
-            slider: badScale.value
-        };
-        console.log(applicant);
     }
+
+    const applicant = {
+        name: name,
+        city: city,
+        state: state,
+        prank: prank,
+        weapon: weaponSelect,
+        slider: slider.value
+    };
+    console.log(applicant);
 });
