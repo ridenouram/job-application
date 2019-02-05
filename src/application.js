@@ -25,7 +25,7 @@ form.addEventListener('submit', function(event) {
     }
 
     const application = {
-        name: [firstName, lastName],
+        name: [lastName, firstName],
         whichTrotsky: whichTrotsky,
         communists: communistFavs,
         grit: gritty.value,
