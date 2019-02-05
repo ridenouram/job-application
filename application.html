@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>ConMari- Application</title>
+</head>
+<body>
+    <header>
+        <a href="./index.html"><img src="" alt="communist Marie Kondo" id="commrade-kondo"></a>
+        <h1>ComMari - Joyful Communist Dating</h1>
+        <h2>Application to Join</h2>
+    </header>
+
+    <main>
+        <fieldset>
+            <legend>Basic Information</legend>
+            
+            <label>Full Name:
+                <input type="text" id="first-name" placeholder="First">
+                <input type="text" id="last-name" placeholder="Last">
+            </label>
+        </fieldset>
+
+        <h3>Profile Questionaire</h3>
+
+        <fieldset>
+            <legend>Please select the names that spark joy for you:</legend>
+            
+            <!-- Checklist input: which of these sparks joy? -->
+            <label>
+                <input type="checkbox" name="communists" value="karl-marx" required>Karl Marx
+                <input type="checkbox" name="communists" value="frederich-engels">Frederich Engels
+                <input type="checkbox" name="communists" value="vladimir-lenin">Vladimir Lenin
+                <input type="checkbox" name="communists" value="joseph-stalin">Joseph Stalin
+                <input type="checkbox" name="communists" value="chairman-mao">Chairman Mao
+                <input type="checkbox" name="communists" value="che-guevara">Che Guevara
+                <input type="checkbox" name="communists" value="antonio-gramsci">Antonio Gramsci
+                <input type="checkbox" name="communists" value="rosa-luxemberg">Rosa Luxemberg
+                <input type="checkbox" name="communists" value="slavoj-zizek">Slavoj Zizek
+                
+            </label>
+
+            
+            
+            <!-- Slider: spark joy scale TBD -->
+            
+        </fieldset>
+        <fieldset>
+            <legend>Which of the images sparks joy for you?</legend>
+            <label>
+                <input type="radio" name="which-trotsky" value="trotsky" required><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Lev_Trotsky.jpg/220px-Lev_Trotsky.jpg" alt="Leon Trotsky" id="trotsky-pic">
+            </label>
+            <label>
+                <input type="radio" name="which-trotsky" value="ice-pick" required><img src="https://assets.katomcdn.com/q_auto,f_auto/products/166/166-IC79/166-ic79.jpg" alt="Ice pick" id="ice-pic">
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>
+                Please select how much joy this image sparks for you:
+            </legend>
+
+            <img src="https://assets3.thrillist.com/v1/image/2787249/size/sk-2017_04_featured_listing_mobile.jpg" alt="Gritty" id="gritty-pic">
+
+           
+            <input type="range" id="gritty" name="gritty" min="0" max="10"><span id="grittiness">5</span>
+            
+
+
+
+        </fieldset>
+
+
+        <fieldset>
+            <legend>Survey</legend>
+            <!-- Drop down: how did you hear about ComMari? -->
+
+        </fieldset>
+
+        <label>
+            <button class="submit" type="button">Submit</button>
+        </label>
+    </main>
+</body>
+</html>
