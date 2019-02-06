@@ -1,50 +1,49 @@
-const submit = document.getElementById('form');
-const obedienceLevel = document.getElementById('obedience-level');
-const selectedObedience = document.getElementById('selected-obedience');
+const form = document.getElementById('form');
+const selectedObedience = document.getElementById('obedience-answer');
+const obedience = document.getElementById('obd-span');
 
-obedienceLevel.addEventListener('change', function() { 
-    selectedObedience.textContent = obedienceLevel.value;
+addEventListener('change', function() { 
+    obedience.textContent = selectedObedience.value;
 });
 
-submit.addEventListener('submit', function() {
+form.addEventListener('submit', function() {
     event.preventDefault();
- 
-    const name = submit.elements.name.value;
-    const phonenumber = submit.elements.name.value;
-    const email = submit.elements.email.value;
-    const street = submit.elements.street.value;
-    const city = submit.elements.city.value;
-    const country = submit.elements.country.value;
-    const key = submit.elements.key.value;
+    
+    const firstName = form.elements.first.value;
+    const lastName = form.elements.last.value;
+    const phone = form.elements.phone.value;
+    const email = form.elements.email.value;
+    const street = form.elements.street.value;
+    const city = form.elements.city.value;
+    const country = form.elements.country.value;
+    const kills = form.elements.kills.value;
 
-    // const thankYou = document.getElementById('thank-you');
+    const skills = form.elements.skills;
+    const skillPreferences = [];
  
-    const skill = submit.elements.fightings;
-    const skillPreference = [];
- 
-    for(let i = 0; i < skill.length; i++){
-        const fightingChoices = skill[i];
-        if(fightingChoices.checked) {
-            skillPreference[i] = fightingChoices.value;
+    for(let i = 0; i < skills.length; i++){
+        const choices = skills[i];
+        if(choices.checked) {
+            skillPreferences.push(choices.value);
         }
     }
 
     const appSubmission = {
-        name: name,
-        phonenumber: phonenumber,
+        firstName:firstName,
+        lastName:lastName,
+        phone: phone,
         email: email,
         street: street,
         city: city,
         country: country,
-        key: key,
-        skill: skillPreference,
-        obedience: obedienceLevel.value
-    };
- 
-    console.log(appSubmission);
+        kills: kills,
+        obedience: selectedObedience.value,
+        skill: skillPreferences
 
-    // const wakanda = JSON.stringify(applicant);
-    // window.location = setItem('appticant', wakanda)
-    // window.location = 'thanks.html';
+    };
+    
+    const serialize = JSON.stringify(appSubmission); 
+    window.localStorage.setItem('appSubmission', serialize); 
+    window.open('./src/application-detail/application-detail.html');
 });
 
