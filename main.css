@@ -55,11 +55,21 @@ legend{
 .thanks-links{
     display: flex;
     flex-direction: column;
-    font-size: 25px;
+    font-size: 20px;
+    background-color: black;
+    color: white;
 }
 
 #application-link{
     font-size: 20px;
+    background-color: black;
+    color: white;
+}
+
+#list-link{
+    font-size: 20px;
+    background-color: black;
+    color: white;
 }
 
 #trotsky-buttons{
@@ -101,4 +111,8 @@ tbody tr:nth-child(odd) {
   
   tbody tr:nth-child(even) {
     background-color: yellow;
+  }
 
+  #review-text{
+      background-color: yellow;
+  }

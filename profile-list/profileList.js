@@ -13,8 +13,12 @@ for (let i = 0; i < allProfiles.length; i++) {
     const tr = document.createElement('tr');
 
     const nameCell = document.createElement('td');
-    nameCell.textContent = profile.name;
+    const a = document.createElement('a');
+    a.href = '/your-profile/review.html?name=' + encodeURIComponent(profile.name);  //****** */
+    a.textContent = profile.name;
+    nameCell.appendChild(a);
     tr.appendChild(nameCell);
+
 
     const communistsCell = document.createElement('td');
     communistsCell.textContent = profile.communists;

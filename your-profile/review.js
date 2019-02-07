@@ -1,13 +1,27 @@
 // Variables
 const json = window.localStorage.getItem('allProfiles');
 
-let profile = null;
+let allProfiles = [];
+
+let profile = [];
 if(json) {
-    const allProfiles = JSON.parse(json);
-    profile = allProfiles[allProfiles.length - 1];
+    allProfiles = JSON.parse(json);
 } else {
     window.location = '/';
 }
+
+
+const searchParam = new URLSearchParams(window.location.search);
+const nameToFind = searchParam.get('name');
+
+for(let i = 0; i < allProfiles.length; i++) {
+    const currentApplicant = allProfiles[i];
+    if (currentApplicant.name === nameToFind) {
+        profile = currentApplicant;
+        break;
+    }
+}
+
 
 const name = document.getElementById('name');
 const whichTrotsky = document.getElementById('which-trotsky');
