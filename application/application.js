@@ -24,20 +24,28 @@ form.addEventListener('submit', function(event) {
         }
     }
 
-    const application = {
-        name: [lastName, firstName],
+    const profile = {
+        name: firstName + ' ' + lastName,
         whichTrotsky: whichTrotsky,
         communists: communistFavs,
         grit: gritty.value,
         referral: referral
     };
 
-    console.log(application);
+    console.log(profile);
 
-    const serialize = JSON.stringify(application);
-    window.localStorage.setItem('application', serialize);
+    let allProfiles = [];
+    const jsonString = window.localStorage.getItem('allProfiles');
 
-    window.location = "thanks.html";
+    if(jsonString) {
+        allProfiles = JSON.parse(jsonString);
+    }
+
+    allProfiles.push(profile);
+    const serialize = JSON.stringify(allProfiles);
+    window.localStorage.setItem('allProfiles', serialize);
+
+    window.location = '../submission/thanks.html';
 });
     
 

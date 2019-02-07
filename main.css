@@ -1,3 +1,29 @@
+@font-face{
+    font-family: Kalinka;
+    src: url(./assets/Kalinka.ttf);
+}
+
+header{
+    text-align: center;
+    background-image: url(./assets/map.jpg);
+}
+
+h1{
+    font-family: Kalinka;
+}
+
+form {
+    font-size: 20px;
+}
+
+body{
+    background-image: url(http://backgroundcheckall.com/wp-content/uploads/2017/12/red-sunburst-background.png);
+}
+
+#comrade-kondo{
+    border: 6px solid black;
+}
+
 #ice-pic{
     height: 200px;
 }
@@ -13,6 +39,13 @@
 fieldset{
     padding: 20px;
     margin-top: 20px;
+    border: 3px dashed black;
+    background-color: yellow;
+}
+
+legend{
+    background-color: black;
+    color: white;
 }
 
 #thanks-text{
@@ -28,4 +61,44 @@ fieldset{
 #application-link{
     font-size: 20px;
 }
+
+#trotsky-buttons{
+    display: flex;
+    flex-direction: column;
+
+}
+
+#gritty-slider{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+
+#profiles-table{
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid black;
+    
+}
+
+thead, td {
+    padding: 10px;
+}
+
+thead {
+    background-color: black;
+    color: white;
+}
+
+#com-column{
+    width: 40%;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: red;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: yellow;
 
