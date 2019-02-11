@@ -1,0 +1,154 @@
+@font-face{
+    font-family: Kalinka;
+    src: url(./assets/Kalinka.ttf);
+}
+
+header{
+    text-align: center;
+    background-image: url(./assets/map.jpg);
+}
+
+h1{
+    font-family: Kalinka;
+}
+
+form {
+    font-size: 20px;
+}
+
+body{
+    background-image: url(http://backgroundcheckall.com/wp-content/uploads/2017/12/red-sunburst-background.png);
+}
+
+#comrade-kondo{
+    border: 6px solid black;
+}
+
+#ice-pic{
+    height: 200px;
+}
+
+#trotsky-pic{
+    height: 200px;
+}
+
+#gritty-pic{
+    height: 200px;
+}
+
+fieldset{
+    padding: 20px;
+    margin-top: 20px;
+    border: 3px dashed black;
+    background-color: yellow;
+}
+
+legend{
+    background-color: black;
+    color: white;
+}
+
+#thanks-text{
+    font-size: 20px;
+}
+
+.thanks-links{
+    margin-top: 50px;
+}
+
+#thanks-text{
+    background-color: yellow;
+}
+
+#submit-button{
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 1em 1.5em;
+    font-family: Kalinka;
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+#index-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+#application-link{
+    background-color: black;
+    color: white;
+    padding: 1em 1.5em;
+    font-family: Kalinka;
+    text-decoration: none;
+    font-size: 22px;
+  }
+  
+  #application-link:hover {
+    background-color: #555;
+  }
+
+  #list-link{
+    background-color: black;
+    color: white;
+    border: 3px yellow;
+    padding: 1em 1.5em;
+    font-family: Kalinka;
+    text-decoration: none;
+    font-size: 22px;
+  }
+  
+  #list-link:hover {
+    background-color: #555;
+  }
+
+
+#trotsky-buttons{
+    display: flex;
+    flex-direction: column;
+
+}
+
+#gritty-slider{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+
+#profiles-table{
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid black;
+    margin-bottom: 50px;
+}
+
+thead, td {
+    padding: 10px;
+}
+
+thead {
+    background-color: black;
+    color: white;
+}
+
+#com-column{
+    width: 40%;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #CF6C6E;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: yellow;
+  }
+
+  #review-text{
+      background-color: yellow;
+  }
+
+ 
